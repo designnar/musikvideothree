@@ -1,0 +1,52 @@
+@import 'imports/index';
+
+@import 'includes/reset';
+@import 'includes/root';
+
+@import 'components/scene';
+@import 'components/title';
+@import 'components/footer';
+
+.intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
+.intro-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intro-screen h1 {
+  font-size: 120px;
+  color: #ff0000;
+  font-family: 'Cocomat', Arial, sans-serif;
+  font-weight: normal;
+  margin: 0;
+  letter-spacing: 10px;
+}
+
+.intro-screen p {
+  font-size: 24px;
+  color: rgba(255, 0, 0, 0.7);
+  font-family: 'Cocomat', Arial, sans-serif;
+  margin-top: 30px;
+}
+
+@font-face {
+  font-family: 'Cocomat';
+  src: url('/Cocomat-Ultralight-trial.ttf') format('truetype');  // ← Ret filnavnet
+  font-weight: normal;
+  font-style: normal;
+}
