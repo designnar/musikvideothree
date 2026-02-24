@@ -388,9 +388,12 @@ if (this.isZooming) {
   
   // Zoom kun hvis vi er længere væk end minimum afstand
   if (distance > 9) {
-    this.camera.position.x *= 0.9991
-    this.camera.position.y *= 0.9991
-    this.camera.position.z *= 0.9991
+    const delta = time - (this.lastTime || time)
+    this.lastTime = time
+    const zoomSpeed = Math.pow(0.9991, delta / (1000 / 60))
+    this.camera.position.x *= zoomSpeed
+    this.camera.position.y *= zoomSpeed
+    this.camera.position.z *= zoomSpeed
   }
   
   // Når kameraet er tæt nok, TILFØJ rotation
