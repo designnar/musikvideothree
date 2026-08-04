@@ -44,6 +44,50 @@
   margin-top: 30px;
 }
 
+.scene-hints {
+  position: fixed;
+  left: 50%;
+  bottom: 42px;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.68);
+  font-family: 'Cocomat', Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  pointer-events: none;
+  text-align: center;
+  opacity: 0;
+  animation: sceneHintsFade 8s ease 0.7s forwards;
+}
+
+.scene-hints p {
+  margin: 0;
+  text-shadow: 0 0 12px rgba(255, 36, 24, 0.45);
+}
+
+@keyframes sceneHintsFade {
+  0% {
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 @font-face {
   font-family: 'Cocomat';
   src: url('/fonts/Cocomat-Ultralight-trial.ttf') format('truetype');  // ← Ret filnavnet
