@@ -412,7 +412,7 @@ setGUI() {
 	  const gui = new GUI()
 	  gui.addColor(this.guiObj, 'starColor').name('Star Color').onChange(handleColorChange)
 	  gui.addColor(this.guiObj, 'backgroundColor').name('Background').onChange(handleBackgroundChange)  // ← TILFØJ DENNE LINJE
-	  gui.add(this.guiObj, 'starRotationSpeed', -0.001, 0.001, 0.00001).name('Star Speed')
+	  gui.add(this.guiObj, 'starRotationSpeed', -0.01, 0.01, 0.00005).name('Star Speed')
 	}
 
   /**
